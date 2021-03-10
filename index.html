@@ -60,7 +60,7 @@
     ];
 
     links.forEach( tup =>{
-      const name, link = tup;
+      const [name, link] = tup;
       div.innerHTML += `<div class="box"><a href="${link}"><span>${name}</span></a></div>`;
     })
   </script>
