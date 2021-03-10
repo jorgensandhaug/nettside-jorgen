@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="Prosjekter/Ballkræsj/style.css">
-    <script src="Prosjekter/Ballkræsj/app.js" defer></script>
+    <link rel="stylesheet" href="/home/sandhaug/jorge/nettside-jorgen/styles.css">
+    <link rel="stylesheet" href="/home/sandhaug/jorge/nettside-jorgen/Prosjekter/Ballkræsj/style.css">
+    <script src="/home/sandhaug/jorge/nettside-jorgen/Prosjekter/Ballkræsj/app.js" defer></script>
     <meta charset="utf-8">
     <title>Nettside</title>
   </head>
@@ -49,19 +49,20 @@
   <script>
     const div = document.querySelector(".prosjektGrid");
     const links = [
-    ("Terraria", "http://79.160.125.77:3000/game/"), 
-    ("World Creator", "http://79.160.125.77:3000/world/"), 
-    ("Sound Visualizer", "sound_visualizer"),
-    ("Tetris", "tetris"),
-    ("Tank", "tank"),
-    ("Tegneprogram", "tegneprogram"),
-    ("Discord Music Bot", "https://discord.com/api/oauth2/authorize?client_id=701432273937104936&permissions=37014784&scope=bot"),
-    ("Platformer", "platformer")
+    ["Terraria", "http://79.160.125.77:3000/game/"], 
+    ["World Creator", "http://79.160.125.77:3000/world/"], 
+    ["Sound Visualizer", "sound_visualizer"],
+    ["Tetris", "tetris"],
+    ["Tank", "tank"],
+    ["Tegneprogram", "tegneprogram"],
+    ["Discord Music Bot", "https://discord.com/api/oauth2/authorize?client_id=701432273937104936&permissions=37014784&scope=bot"],
+    ["Platformer", "platformer"]
     ];
 
     links.forEach( tup =>{
-      const [name, link] = tup;
-      div.innerHTML += `<div class="box"><a href="${link}"><span>${name}</span></a></div>`;
+      const name = tup[0];
+      const link = tup[1];
+      div.innerHTML += '<div class="box"><a href='+link+'><span>'+name+'</span></a></div>';
     })
   </script>
   </body>
